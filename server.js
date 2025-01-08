@@ -6,12 +6,8 @@ const authRoutes = require('./routes/authRoutes');
 dotenv.config();
 const cors = require('cors');
 const app = express();
-app.use(cors({
-  origin: 'https://hd-frontend-mauve.vercel.app/',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
-app.options('*', cors());
+app.use(cors(*));
+
 app.use(express.json());
 app.use('/', authRoutes);
 
